@@ -41,7 +41,7 @@ $(document).ready(function ($) {
               }
               $(".id-number").text(tracking_number);
               if (delivered == true) {
-                $(".status").text("Παραδώθηκε").css("color", "green");
+                $(".status").text("Παραδόθηκε").css("color", "green");
               } else {
                 $(".status").text("Προς παράδοση").css("color", "red");
               }
