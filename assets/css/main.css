@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&display=swap");
+
+body {
+  font-family: "Advent Pro", sans-serif !important;
+}
+
+#header {
+  box-shadow: 0px 3px 6px #0000006e;
+  background: #8a8a8a;
+  color: #fff;
+}
+
+#header img {
+  max-width: 80px;
+}
+
+#hero {
+  min-height: 100vh;
+  background-image: url("../img/hero-img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.merchant-box img {
+  max-width: 150px;
+}
+
+.merchant-box {
+  border: 1px solid #f7f7f7;
+  border-radius: 15px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 5px 5px 18px 5px rgba(0, 0, 0, 0.13);
+  box-shadow: 5px 5px 18px 5px rgba(0, 0, 0, 0.13);
+}
+
+.search-info {
+  background: #b48e78;
+  height: 100%;
+  color: #fff;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  font-size: 18px;
+  text-align: center;
+}
+
+.the-search {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ccc4c8;
+  align-items: center;
+  padding: 30px 0px;
+}
+
+.the-search input {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+
+#submit-search {
+  max-width: 200px;
+  width: 100%;
+  border: 1px solid transparent;
+  background-color: #0000ff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+#the-result {
+  display: none;
+}
+
+.courier-logo {
+  max-width: 200px;
+  padding: 30px 0px;
+}
+
+.the-last-update {
+  background: #cacaca;
+  color: #000;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  #hero {
+    display: none;
+  }
+  .row-couriers {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .search-info {
+    padding: 30px;
+  }
+}
