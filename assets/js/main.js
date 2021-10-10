@@ -87,6 +87,7 @@ $(document).ready(function ($) {
         })
         .fail(function (response) {
           $(".result-items").hide();
+          $(".problem-text").remove();
           $("#the-result")
             .append(
               '<h2 class="problem-text text-center pt-5 pb-5"> Παρουσιάστηκε κάποιο πρόβλημα, παρακαλώ προσπαθήστε ξανά</h2>'
