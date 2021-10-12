@@ -15,11 +15,22 @@ body {
 }
 
 #hero {
-  min-height: 100vh;
-  background-image: url("../img/hero-img.png");
+  min-height: 75vh;
+  background: linear-gradient(
+      90deg,
+      rgba(153, 118, 92, 0.5) 0%,
+      rgba(207, 158, 124, 0.5) 100%
+    ),
+    url("../img/delivery.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+#search-section {
+  position: absolute;
+  top: 50%;
+  width: 100%;
 }
 
 .merchant-box img {
@@ -38,12 +49,14 @@ body {
 }
 
 .search-info {
-  background: #b48e78;
+  background: rgba(54,57,63,0.6);
   height: 100%;
   color: #fff;
   justify-content: center;
   display: flex;
   flex-direction: column;
+  border-radius: 20px 0px 0px 22px;
+  backdrop-filter: blur(20px);
 }
 
 .info {
@@ -56,9 +69,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #ccc4c8;
+  background: rgba(204,196,200,0.5);
   align-items: center;
   padding: 30px 0px;
+  border-radius: 0px 20px 20px 0px;
+  backdrop-filter: blur(20px);
 }
 
 .the-search input {
@@ -72,7 +87,7 @@ body {
   max-width: 200px;
   width: 100%;
   border: 1px solid transparent;
-  background-color: #0000ff;
+  background-color: #000;
   color: #fff;
   border-radius: 5px;
 }
@@ -97,11 +112,23 @@ body {
   #hero {
     display: none;
   }
+  #search-section {
+    top: auto;
+    position: relative;
+  }
+  #search-section .container {
+    max-width: 100%;
+  }
   .row-couriers {
     flex-direction: column;
     gap: 20px;
   }
   .search-info {
     padding: 30px;
+    background:#b48e78;
+    border-radius: 0px;
+  }
+  .the-search{
+    border-radius: 0px;
   }
 }
