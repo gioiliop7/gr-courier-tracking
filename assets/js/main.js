@@ -8,6 +8,35 @@ $(document).ready(function ($) {
         timeout: 0,
       };
 
+      function translateSkroutz(status) {
+        switch (status) {
+          case "Failed to pickup":
+            status =
+              "Αποτυχία παραλαβής από το κατάστημα ή απο το κέντρο διαλογής του Skroutz";
+            break;
+          case "Shipment was picked up":
+            status =
+              "Επιτυχής παραλαβή από το κατάστημα ή απο το κέντρο διαλογής του Skroutz";
+            break;
+          case "Waiting For Pickup":
+            status =
+              "Αναμονή παραλαβής από το κατάστημα ή απο το κέντρο διαλογής του Skroutz";
+            break;
+          case "Shipment was assigned to courier for_delivery":
+            status = "Έναρξη παράδοσης";
+            break;
+          case "Shipment was not delivered":
+            status = "Αποτυχία παράδοσης";
+            break;
+          case "Shipment was delivered":
+            status = "Επιτυχής παράδοση";
+            break;
+          default:
+            break;
+        }
+        return status;
+      }
+
       $.ajax(settings)
         .done(function (response) {
           console.log(response);
@@ -19,16 +48,17 @@ $(document).ready(function ($) {
             let delivered = response.delivered;
             let last_update = response.last;
             let last_update_status = last_update.status;
+            last_update_status = translateSkroutz(last_update_status);
             let space = last_update.space;
             let time = last_update.time;
             if (found == true) {
               if (!space == "") {
                 $(".lu").html(
-                  "<br>Κατάσταση: " +
+                  "<br><span class='font-weight-bold'>Κατάσταση</span>: " +
                     last_update_status +
-                    "<br> Ημερομηνία: " +
+                    "<br> <span class='font-weight-bold'>Ημερομηνία</span>: " +
                     time +
-                    "<br>Τοποθεσία:" +
+                    "<br><span class='font-weight-bold'>Τοποθεσία</span>: " +
                     space
                 );
               } else {
@@ -56,6 +86,9 @@ $(document).ready(function ($) {
                 case "ACS":
                   $(".courier-logo").attr("src", "./assets/img/acs.svg");
                   break;
+                case "Skroutz Last Mile":
+                  $(".courier-logo").attr("src", "./assets/img/skroutz.svg");
+                  break;
               }
               let i = 0;
               let len = responses.length;
@@ -63,6 +96,7 @@ $(document).ready(function ($) {
               for (i = 0; i < len; i++) {
                 let responses_time = responses[i].time;
                 let responses_status = responses[i].status;
+                responses_status = translateSkroutz(responses_status);
                 let resposnes_space = responses[i].space;
                 const html_code = `<tr>
             <td>${responses_status}</td>
