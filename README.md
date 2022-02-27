@@ -5,6 +5,7 @@
 - Acs Courier
 - Elta Courier
 - Speedex
+- Skroutz Last Mile
 
 ### Installation
 Just clone the project and open index.html in your browser
