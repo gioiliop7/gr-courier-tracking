@@ -6,7 +6,8 @@
 - Elta Courier
 - Speedex
 - Skroutz Last Mile
-
+- EasyMail
+- Geniki Taxydromiki
 ### Installation
 Just clone the project and open index.html in your browser
 

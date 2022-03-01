@@ -3,7 +3,7 @@ $(document).ready(function ($) {
     let value = $("#t-number").val();
     if (value) {
       var settings = {
-        url: "https://eltrak.herokuapp.com/v2/track-all/" + value,
+        url: "https://eltrak.devdd.xyz/v2/track-all/" + value,
         method: "GET",
         timeout: 0,
       };
@@ -88,6 +88,12 @@ $(document).ready(function ($) {
                   break;
                 case "Skroutz Last Mile":
                   $(".courier-logo").attr("src", "./assets/img/skroutz.svg");
+                  break;
+                case "Geniki":
+                  $(".courier-logo").attr("src", "./assets/img/geniki.jpg");
+                  break;
+                case "EasyMail":
+                  $(".courier-logo").attr("src", "./assets/img/easymail.jpg");
                   break;
               }
               let i = 0;

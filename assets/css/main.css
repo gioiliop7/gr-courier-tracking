@@ -43,12 +43,13 @@ body {
 .merchant-box {
   border: 1px solid #f7f7f7;
   border-radius: 15px;
-  height: 120px;
+  min-height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   -webkit-box-shadow: 5px 5px 18px 5px rgba(0, 0, 0, 0.13);
   box-shadow: 5px 5px 18px 5px rgba(0, 0, 0, 0.13);
+  margin:1rem 0;
 }
 
 .search-info {

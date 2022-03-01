@@ -1,7 +1,7 @@
 $(document).ready(function ($) {
     function wake_heroku() {
         var settings = {
-            url: "https://eltrak.herokuapp.com/",
+            url: "https://eltrak.devdd.xyz",
             method: "GET",
             timeout: 0,
         };
